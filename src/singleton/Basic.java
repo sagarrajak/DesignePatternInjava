@@ -24,7 +24,10 @@ class SingleTon implements Serializable {
 	public static SingleTon getInstace() {
 		return instance;
 	}
-
+	
+	protected Object readResolve() { 
+		return instance;
+	}
 }
 
 public class Basic {

@@ -22,6 +22,7 @@ public class SeriallizationProblem {
 	}
 
 	public static void main(String[] args) throws Exception {
+		// Before readResolve method
 		SingleTon obj = SingleTon.getInstace();
 		obj.setName("123");
 		saveToFile(obj, "singleTon.bin");
@@ -30,5 +31,6 @@ public class SeriallizationProblem {
 		obj2.setName("test123");
 		System.out.println(obj.getName());
 		System.out.println(obj2.getName());
+		// After readResolve method we are getting same value
 	}
 }
