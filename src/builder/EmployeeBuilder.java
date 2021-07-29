@@ -39,23 +39,23 @@ class PersonBuilder<T extends PersonBuilder<T>> {
 	}
 }
 
-public class EmployeeBuilder extends PersonBuilder<EmployeeBuilder> {
+class EmployeeBuilder2 extends PersonBuilder<EmployeeBuilder2> {
 
-	public EmployeeBuilder() {
+	public EmployeeBuilder2() {
 	}
 
-	public EmployeeBuilder withSalery(Integer salery) {
+	public EmployeeBuilder2 withSalery(Integer salery) {
 		this.person.salery = salery;
 		return this;
 	}
 
-	public EmployeeBuilder withProfile(String profile) {
+	public EmployeeBuilder2 withProfile(String profile) {
 		this.person.profile = profile;
 		return this;
 	}
 
 	@Override
-	protected EmployeeBuilder self() {
+	protected EmployeeBuilder2 self() {
 		return this;
 	}
 
@@ -69,7 +69,7 @@ public class EmployeeBuilder extends PersonBuilder<EmployeeBuilder> {
 class Demo2 {
 	public static void main(String[] args) {
 		//Fluient Interface 
-		EmployeeBuilder eb = new EmployeeBuilder();
+		EmployeeBuilder2 eb = new EmployeeBuilder2();
 		Person p = eb.withName("Sagar rajak").withAge(26).withProfile("Developer").withAge(36).build();
 		System.out.println(p);
 	}
