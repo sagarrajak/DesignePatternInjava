@@ -1,4 +1,5 @@
-package solidDesignPrinciple;
+package solid;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
