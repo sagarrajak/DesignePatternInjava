@@ -39,7 +39,7 @@ class Journal {
 
 }
 
-class Percistance {
+class Percistance {  
 	public void saveToFile(Journal journal, String filename, boolean override) throws FileNotFoundException {
 		if (override || new File(filename).exists()) {
 			try (PrintStream out = new PrintStream(filename)) {
